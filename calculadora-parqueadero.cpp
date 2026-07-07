@@ -7,11 +7,6 @@ int main () {
 int horas, descuento;	
 float tarifa, tarifa2, tarifa3, tarifa4;
 
-tarifa=0;
-tarifa2=0;
-tarifa3=0;
-tarifa4=0;
-
 cout<<"Cuantas horas estuvo en el parqueadero: ";
 cin>>horas;
 
@@ -31,7 +26,7 @@ tarifa2=(tarifa*1500)+2000;
 tarifa3=tarifa2*0.10;
 tarifa4=tarifa2-tarifa3;	
 descuento=10;
-}else if(horas>=10){
+}else if(horas>=10){ //aplicar el descuento del 20 porciento si estuvo 10 horas o mas
 
 tarifa=horas-1;
 tarifa2=(tarifa*1500)+2000;
@@ -39,18 +34,18 @@ tarifa3=tarifa2*0.20;
 tarifa4=tarifa2-tarifa3;
 descuento=20;
 
-}else{
+}else{ //Mensaje de error si el valor no es valido
 	cout<<"Valor incorrecto";
 }
 
 cout<<"Numero horas que estuvo: "<<horas<<endl;
 
-if(horas>=5){
+if(horas>=5){//mostrar descuento y precio con descuento si cumple los requisitos
 
 cout<<"Costo sin descuento: "<<tarifa2<<endl;
 cout<<"Descuento del %"<<descuento<<" es igual a: "<<tarifa3<<endl;
 cout<<"Costo total: "<<tarifa4;
 }else{
-	cout<<"Costo total: "<<tarifa2;
+	cout<<"Costo total: "<<tarifa2; //Mostrar el costo si solo estuvo una hora
 }
 }
